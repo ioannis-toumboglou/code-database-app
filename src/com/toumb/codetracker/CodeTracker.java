@@ -6,21 +6,21 @@ public class CodeTracker {
 	private int id;
 	private String title;
 	private String category;
-	private Date dateOfBirth;
+	private Date date;
 	private String description;
 	
-	public CodeTracker(int id, String title, String category, Date dateOfBirth, String description) {
+	public CodeTracker(int id, String title, String category, Date date, String description) {
 		this.id = id;
 		this.title = title;
 		this.category = category;
-		this.dateOfBirth = dateOfBirth;
+		this.date = date;
 		this.description = description;
 	}
 
-	public CodeTracker(String title, String category, Date dateOfBirth, String description) {
+	public CodeTracker(String title, String category, Date date, String description) {
 		this.title = title;
 		this.category = category;
-		this.dateOfBirth = dateOfBirth;
+		this.date = date;
 		this.description = description;
 	}
 
@@ -48,12 +48,12 @@ public class CodeTracker {
 		this.category = category;
 	}
 
-	public Date getDateOfBirth() {
-		return dateOfBirth;
+	public Date getDate() {
+		return date;
 	}
 
-	public void setDateOfBirth(Date dateOfBirth) {
-		this.dateOfBirth = dateOfBirth;
+	public void setDate(Date date) {
+		this.date = date;
 	}
 
 	public String getDescription() {
@@ -66,7 +66,7 @@ public class CodeTracker {
 
 	@Override
 	public String toString() {
-		return "CodeTracker [id=" + id + ", title=" + title + ", category=" + category + ", dateOfBirth=" + dateOfBirth
+		return "CodeTracker [id=" + id + ", title=" + title + ", category=" + category + ", date=" + date
 				+ ", description=" + description + "]";
 	}	
 	
