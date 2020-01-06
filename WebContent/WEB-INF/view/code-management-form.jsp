@@ -27,33 +27,39 @@
 			<table>
 				<tbody>
 					<tr>
-						<td><label>Title:</label></td>
-						<td><form:input path="title" /></td>
+						<td><label><b>Title:</b></label></td>
+						<td><form:input path="title" required="required" /></td>
 					</tr>
 					<tr>
-						<td><label>Category:</label></td>
-						<td><form:input path="category" /></td>
+						<td><label><b>Category:</b></label></td>
+						<td><form:input path="category" required="required" /></td>
 					</tr>
 					<tr>
-						<td><label>Date:</label></td>
-						<td><form:input path="date" /></td>
+						<td><label><b>Date:</b></label></td>
+						<td><input type="date" name="date" required="required" /></td>
 					</tr>
 					<tr>
-						<td><label>Description:</label></td>
-						<td><form:input path="description" /></td>
+						<td><label><b>Description:</b></label></td>
+						<td>
+							<textarea name="description" placeholder="Please type a description" rows="5" required="required"/></textarea>
+						</td>
 					</tr>
 					<tr>
+						<td><label><b>File:</b></label></td>
+						<td><input type="file" name="code_file" required="required" /></td>
+					</tr>
+					<tr style="margin-left:150px;">
 						<td><label></label></td>
-						<td><input type="submit" value="Save" class="save" /></td>
+						<td>
+							<input type="submit" value="Save" class="save" />
+							<input type="button" value="Cancel" class="cancel" onclick="window.location.href='./'"/>
+						</td>
 					</tr>
 				</tbody>
 			</table>
 		</form:form>
 		
 		<div style="clear; both;"></div>
-		<p>
-			<a href="${pageContext.request.contextPath}/code/list">Back to List</a>
-		</p>
 		
 	</div>
 

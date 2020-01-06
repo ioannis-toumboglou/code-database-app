@@ -2,27 +2,35 @@ package com.toumb.entity;
 
 import java.sql.Date;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name="code")
 public class Code {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	@Column(name="id")
 	private int id;
+	
+	@Column(name="title")
 	private String title;
+	
+	@Column(name="category")
 	private String category;
+	
+	@Column(name="date")
 	private Date date;
+	
+	@Column(name="description")
 	private String description;
 	
-	public Code(int id, String title, String category, Date date, String description) {
-		this.id = id;
-		this.title = title;
-		this.category = category;
-		this.date = date;
-		this.description = description;
-	}
-
-	public Code(String title, String category, Date date, String description) {
-		this.title = title;
-		this.category = category;
-		this.date = date;
-		this.description = description;
-	}
+	@Column(name="code_file")
+	private byte[] data;
 	
 	public Code() {
 	}
@@ -65,6 +73,14 @@ public class Code {
 
 	public void setDescription(String description) {
 		this.description = description;
+	}
+
+	public byte[] getData() {
+		return data;
+	}
+
+	public void setData(byte[] data) {
+		this.data = data;
 	}
 
 	@Override

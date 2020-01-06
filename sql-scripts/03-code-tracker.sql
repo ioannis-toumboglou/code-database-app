@@ -13,6 +13,6 @@ CREATE TABLE `code` (
   `category` varchar(50) DEFAULT NULL,
   `date` date DEFAULT NULL,
   `description` varchar(500) DEFAULT NULL,
-  `java_file` mediumblob,
+  `code_file` mediumblob,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;

@@ -18,16 +18,17 @@
 	</div>
 	
 	<div id="container">
-		<div id="content">
-			<!-- Add code button -->
-			<input type="button" value="Add Code" 
-				   onclick="window.location.href='showAddForm'; return false;" 
-				   class="add-button"
-			/>
-			
+		<div id="content">			
 			<!-- Add search box -->
 			<form:form action="search" method="GET">Search Code:<input type="text" name="searchKeyword" />
 				<input type="submit" value="Search" class="add-button" />
+				
+				<!-- Add code button -->
+				<input type="button" value="Add Code" 
+					   onclick="window.location.href='showAddForm'; return false;" 
+					   class="add-button"
+					   style="float: right;"
+				/>
 			</form:form>
 		
 			<!-- Add HTML table -->
@@ -37,6 +38,7 @@
 					<th>Category</th>
 					<th>Date</th>
 					<th>Description</th>
+					<th>Code</th>
 				</tr>
 				
 				<c:forEach var="tempCode" items="${codeList}">
@@ -53,8 +55,13 @@
 						<td> ${tempCode.category} </td>
 						<td> ${tempCode.date} </td>
 						<td> ${tempCode.description} </td>
+						<td> 
+							<a href="${tempCode.code}">Show</a> 
+						</td>
 						<td>
-							<a href="${updateLink}">Update</a> | <a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this code record?'))) return false">Delete</a>
+							<a href="${updateLink}">Update</a> 
+							| 
+							<a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this code record?'))) return false">Delete</a>
 						</td>
 					</tr>					
 				</c:forEach>

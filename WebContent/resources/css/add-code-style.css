@@ -13,7 +13,7 @@ label {
 }
 
 input {
-	width: 250px;
+	width: 450px;
 	border: 1px solid #666; 
 	border-radius: 5px; 
 	padding: 4px; 
@@ -25,7 +25,26 @@ input {
 	width: 130px; 
 	padding: 5px 10px; 
 	margin-top: 30px;
+	margin-left: 65px;
 	background: #cccccc;
+}
+
+.save:hover {
+	background: #c0c0c0;
+}
+
+.cancel {
+	font-weight: bold;
+	width: 125px; 
+	padding: 5px 10px; 
+	margin-top: 30px;
+	margin-left: 50px;
+	background: #cccccc;
+	text-align: center;
+}
+
+.cancel:hover {
+	background: #c0c0c0;
 }
 
 table {   
@@ -40,4 +59,11 @@ tr {
 	border-style:none;
 	text-align:left;	
 }
-	
+
+textarea {
+	width: 450px;
+	border: 1px solid #666; 
+	border-radius: 5px; 
+	padding: 4px; 
+	font-size: 16px;
+}
