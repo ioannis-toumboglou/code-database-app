@@ -55,10 +55,9 @@
 						<td> ${tempCode.category} </td>
 						<td> ${tempCode.date} </td>
 						<td> ${tempCode.description} </td>
-						<td> 
-							<a href="${tempCode.code}">Show</a> 
-						</td>
 						<td>
+							<a href="${tempCode.data}">Show</a>
+							|
 							<a href="${updateLink}">Update</a> 
 							| 
 							<a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this code record?'))) return false">Delete</a>

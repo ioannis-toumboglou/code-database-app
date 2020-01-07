@@ -36,23 +36,23 @@
 					</tr>
 					<tr>
 						<td><label><b>Date:</b></label></td>
-						<td><input type="date" name="date" required="required" /></td>
+						<td><form:input path="date" required="required" /></td>
 					</tr>
 					<tr>
 						<td><label><b>Description:</b></label></td>
 						<td>
-							<textarea name="description" placeholder="Please type a description" rows="5" required="required"/></textarea>
+							<form:textarea path="description" placeholder="Please type a description" rows="5" required="required"/>
 						</td>
 					</tr>
 					<tr>
 						<td><label><b>File:</b></label></td>
-						<td><input type="file" name="code_file" required="required" /></td>
+						<td><input type="file" name="code_file" /></td>
 					</tr>
 					<tr style="margin-left:150px;">
 						<td><label></label></td>
 						<td>
 							<input type="submit" value="Save" class="save" />
-							<input type="button" value="Cancel" class="cancel" onclick="window.location.href='./'"/>
+							<input type="button" value="Cancel" class="cancel" onclick="window.location.href='list'"/>
 						</td>
 					</tr>
 				</tbody>

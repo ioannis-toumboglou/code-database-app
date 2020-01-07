@@ -15,4 +15,4 @@ CREATE TABLE `code` (
   `description` varchar(500) DEFAULT NULL,
   `code_file` mediumblob,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;
