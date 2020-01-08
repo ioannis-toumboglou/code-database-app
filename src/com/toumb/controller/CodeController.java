@@ -5,9 +5,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -20,7 +20,7 @@ public class CodeController {
 	// Need to inject Code Service
 	@Autowired
 	private CodeService codeService;
-
+	
 	@GetMapping("/list")
 	public String listCode(Model model) {
 		// Get the code list from the Service
@@ -42,8 +42,8 @@ public class CodeController {
 		return "code-management-form";
 	}
 	
-	@PostMapping("/saveCode")
-	public String saveCode(@ModelAttribute("code") Code code) {
+	@RequestMapping("/saveCode")
+	public String saveCode(@ModelAttribute("code") Code code, BindingResult result) {		
 		// Save the code using the service
 		codeService.saveCode(code);
 		

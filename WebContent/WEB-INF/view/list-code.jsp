@@ -5,7 +5,7 @@
 <html>
 
 <head>
-	<title>List Code</title>
+	<title>Code Management Application</title>
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css" />
 </head>
 
@@ -20,7 +20,7 @@
 	<div id="container">
 		<div id="content">			
 			<!-- Add search box -->
-			<form:form action="search" method="GET">Search Code:<input type="text" name="searchKeyword" />
+			<form:form action="search" method="GET">Search Code:<input type="text" name="searchKeyword" id="searchBar"/>
 				<input type="submit" value="Search" class="add-button" />
 				
 				<!-- Add code button -->

@@ -4,7 +4,7 @@
 <html>
 
 <head>
-	<title>Save Code</title>
+	<title>Code Management Application</title>
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/style.css">
 	<link type="text/css" rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/add-code-style.css">
 </head>
@@ -36,7 +36,7 @@
 					</tr>
 					<tr>
 						<td><label><b>Date:</b></label></td>
-						<td><form:input path="date" required="required" /></td>
+						<td><form:input type="date" path="date" required="required" /></td>
 					</tr>
 					<tr>
 						<td><label><b>Description:</b></label></td>

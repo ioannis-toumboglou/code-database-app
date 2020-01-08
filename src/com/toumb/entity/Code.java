@@ -1,7 +1,7 @@
 package com.toumb.entity;
 
-import java.sql.Date;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -9,6 +9,8 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
@@ -26,7 +28,8 @@ public class Code {
 	@Column(name="category")
 	private String category;
 	
-	@DateTimeFormat(pattern="dd/MM/yyyy")
+	@DateTimeFormat(pattern="yyyy-MM-dd")
+	@Temporal(TemporalType.DATE)
 	@Column(name="date")
 	private Date date;
 	
@@ -64,19 +67,17 @@ public class Code {
 	}
 
 	public Date getDate() {
-		java.sql.Date dateSQL = new java.sql.Date(date.getTime());
-		
-		// Add one day, as every time a date is updated, the system subtracts one day
-		// Couldn't find a better solution
-		Calendar cal = Calendar.getInstance();
-		cal.setTime(dateSQL);
-		cal.add(Calendar.DAY_OF_YEAR, 1);
-		date = new Date(cal.getTimeInMillis());
-		
 		return date;
 	}
 
 	public void setDate(Date date) {
+		// Add one day, as every time a date is updated, the system subtracts one day
+		// Couldn't find a better solution
+		Calendar cal = Calendar.getInstance();
+		cal.setTime(date);
+		cal.add(Calendar.DAY_OF_YEAR, 1);
+		date = new Date(cal.getTimeInMillis());
+		
 		this.date = date;
 	}
 

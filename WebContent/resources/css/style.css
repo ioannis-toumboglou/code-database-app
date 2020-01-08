@@ -54,3 +54,8 @@ tr:nth-child(odd) {background: #BBBBBB}
 a {
 	text-decoration: none;
 }
+
+#searchBar {
+	width: 250px;
+	border-radius: 5px;
+}
