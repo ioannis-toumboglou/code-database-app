@@ -71,7 +71,7 @@ public class CodeDAOImpl implements CodeDAO {
 		// Search only if query isn't empty
 		if(keyword != null && keyword.trim().length() > 0) {
 			query = currentSession.createQuery("FROM Code WHERE LOWER(title) LIKE :keyword OR LOWER(category) LIKE :keyword OR "
-					+ "LOWER(date) like :keyword", Code.class);
+					+ "LOWER(date) like :keyword OR LOWER(description) like :keyword", Code.class);
 			query.setParameter("keyword", "%" + keyword.toLowerCase() + "%");
 		} else {
 			query = currentSession.createQuery("FROM Code", Code.class);

@@ -26,29 +26,29 @@
 		
 			<table>
 				<tbody>
-					<tr>
+					<tr id="table">
 						<td><label><b>Title:</b></label></td>
 						<td><form:input path="title" required="required" /></td>
 					</tr>
-					<tr>
+					<tr id="table">
 						<td><label><b>Category:</b></label></td>
 						<td><form:input path="category" required="required" /></td>
 					</tr>
-					<tr>
+					<tr id="table">
 						<td><label><b>Date:</b></label></td>
 						<td><form:input type="date" path="date" required="required" /></td>
 					</tr>
-					<tr>
+					<tr id="table">
 						<td><label><b>Description:</b></label></td>
 						<td>
 							<form:textarea path="description" placeholder="Please type a description" rows="5" required="required"/>
 						</td>
 					</tr>
-					<tr>
+					<tr id="table">
 						<td><label><b>File:</b></label></td>
 						<td><input type="file" name="code_file" /></td>
 					</tr>
-					<tr style="margin-left:150px;">
+					<tr style="margin-left:150px; background-color: aliceblue;">
 						<td><label></label></td>
 						<td>
 							<input type="submit" value="Save" class="save" />

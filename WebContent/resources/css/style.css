@@ -2,6 +2,7 @@ html, body{
 	margin-left:15px; margin-right:15px; margin-bottom:30px;
 	padding:0px; 
 	font-family:Verdana, Arial, Helvetica, sans-serif;
+	background-color: aliceblue;
 }
 
 table {   
@@ -14,23 +15,35 @@ table {
  
 th {
 	border-bottom:1px solid gray;
-	background:none repeat scroll 0 0 #408080;
+	background:none repeat scroll 0 0 #54a7a7;
 	padding:10px;
 	color: #FFFFFF;
 }
 
 tr {
 	border-top:1px solid gray;
-	text-align:center;	
+	text-align:center;
 }
  
-tr:nth-child(even) {background: #FFFFFF}
-tr:nth-child(odd) {background: #BBBBBB}	
+tr:nth-child(even) {
+	background: #FFFFFF;
+	line-height: 35px;
+}
+
+tr:nth-child(odd) {
+	background: #FFFFFF;
+	line-height: 35px;
+} 
+
+
+tr:hover {
+	background-color: #DFDFDF;
+}	
  
 #wrapper {width: 100%; margin-top: 0px;}
-#header {width: 75%; background: #408080; margin: 0px auto; padding:15px 0px 15px 15px;}
+#header {width: 85%; background: #54a7a7; margin: 0px auto; padding:15px 0px 15px 15px;}
 #header h2 {width: 100%; margin:auto; color: #FFFFFF;}
-#container {width: 75%; margin: 0px auto;}
+#container {width: 85%; margin: 0px auto;}
 #container h3 {color: #000;}
 #container #content {margin-top: 20px;}
 
@@ -58,4 +71,43 @@ a {
 #searchBar {
 	width: 250px;
 	border-radius: 5px;
+	line-height: 25px;
+	font-size: 16px;
+	margin-left: 5px;
+}
+
+.open-code-button {
+	background: #4aca44;
+	border-color: #2bd52f;
+	color: #FFFFFF;
+	font-weight: bold;
+	width: 75px; 
+	line-height: 25px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.open-code-button:hover {
+	background: #23af26;
+	border-color: #23af26;
+}
+
+.delete-button {
+	background: #e30627;
+	border-color: #e30627;
+	color: #FFFFFF;
+	font-weight: bold;
+	width: 75px;
+	line-height: 25px;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.delete-button:hover {
+	background: #ae0000;
+	border-color: #ae0000;
+}
+
+#table {
+	background-color: aliceblue;
 }

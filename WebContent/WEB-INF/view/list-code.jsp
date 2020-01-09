@@ -20,7 +20,7 @@
 	<div id="container">
 		<div id="content">			
 			<!-- Add search box -->
-			<form:form action="search" method="GET">Search Code:<input type="text" name="searchKeyword" id="searchBar"/>
+			<form:form action="search" method="GET"><b>Search Code:</b><input type="text" name="searchKeyword" id="searchBar"/>
 				<input type="submit" value="Search" class="add-button" />
 				
 				<!-- Add code button -->
@@ -54,13 +54,16 @@
 						<td> ${tempCode.title} </td>
 						<td> ${tempCode.category} </td>
 						<td> ${tempCode.date} </td>
-						<td> ${tempCode.description} </td>
+						<td style="max-width:12em; text-overflow:ellipsis; white-space:nowrap; overflow:hidden;"> ${tempCode.description} </td>
 						<td>
-							<a href="${tempCode.data}">Show</a>
+							<input type="button" value="Open" class="open-code-button" onclick="window.location.href='${updateLink}'"/>
+							<input type="button" value="Delete" class="delete-button" onclick="if(confirm('Are you sure you want to delete this record?')) {window.location.href='${deleteLink}'} else {return false;}"/>
+							<!--  <a href="${tempCode.data}">Open</a>
 							|
 							<a href="${updateLink}">Update</a> 
 							| 
 							<a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this code record?'))) return false">Delete</a>
+							-->
 						</td>
 					</tr>					
 				</c:forEach>
