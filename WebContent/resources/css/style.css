@@ -9,14 +9,15 @@ table {
 	border-collapse:collapse;
 	border-bottom:1px solid gray;
 	font-family: Tahoma,Verdana,Segoe,sans-serif;
-	width:101%;
+	margin: 0px 0px 0px -25px;
+	width:1162px;
 	background: #DCDCDC;
 }
  
 th {
 	border-bottom:1px solid gray;
 	background:none repeat scroll 0 0 #54a7a7;
-	padding:10px;
+	padding:0px;
 	color: #FFFFFF;
 }
 
@@ -41,7 +42,7 @@ tr:hover {
 }	
  
 #wrapper {width: 100%; margin-top: 0px;}
-#header {width: 85%; background: #54a7a7; margin: 0px auto; padding:15px 0px 15px 15px;}
+#header {width: 1150px; background: #54a7a7; margin: 0px auto; padding:15px 0px 15px 15px;}
 #header h2 {width: 100%; margin:auto; color: #FFFFFF;}
 #container {width: 85%; margin: 0px auto;}
 #container h3 {color: #000;}

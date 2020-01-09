@@ -30,6 +30,8 @@
 					   style="float: right;"
 				/>
 			</form:form>
+			
+			<br/>
 		
 			<!-- Add HTML table -->
 			<table>
@@ -58,12 +60,6 @@
 						<td>
 							<input type="button" value="Open" class="open-code-button" onclick="window.location.href='${updateLink}'"/>
 							<input type="button" value="Delete" class="delete-button" onclick="if(confirm('Are you sure you want to delete this record?')) {window.location.href='${deleteLink}'} else {return false;}"/>
-							<!--  <a href="${tempCode.data}">Open</a>
-							|
-							<a href="${updateLink}">Update</a> 
-							| 
-							<a href="${deleteLink}" onclick="if(!(confirm('Are you sure you want to delete this code record?'))) return false">Delete</a>
-							-->
 						</td>
 					</tr>					
 				</c:forEach>

@@ -47,10 +47,6 @@ input {
 	background: #c0c0c0;
 }
 
-table {   
-	border-style:none;
-	width:50%;
-}
 
 tr:nth-child(even) {background: #FFFFFF}
 tr:nth-child(odd) {background: #FFFFFF}
