@@ -36,7 +36,10 @@ public class Code {
 	@Column(name="description")
 	private String description;
 	
-	@Column(name="code_file")
+	@Column(name="file_name")
+	private String fileName;
+	
+	@Column(name="file_data")
 	private byte[] data;
 	
 	public Code() {
@@ -88,6 +91,14 @@ public class Code {
 	public void setDescription(String description) {
 		this.description = description;
 	}
+	
+	public String getFileName() {
+		return fileName;
+	}
+
+	public void setFileName(String fileName) {
+		this.fileName = fileName;
+	}
 
 	public byte[] getData() {
 		return data;
@@ -99,8 +110,8 @@ public class Code {
 
 	@Override
 	public String toString() {
-		return "CodeTracker [id=" + id + ", title=" + title + ", category=" + category + ", date=" + date
-				+ ", description=" + description + "]";
-	}	
-	
+		return "Code [id=" + id + ", title=" + title + ", category=" + category + ", date=" + date + ", description="
+				+ description + ", fileName=" + fileName + "]";
+	}
+
 }

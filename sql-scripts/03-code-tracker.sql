@@ -12,7 +12,8 @@ CREATE TABLE `code` (
   `title` varchar(50) DEFAULT NULL,
   `category` varchar(50) DEFAULT NULL,
   `date` date DEFAULT NULL,
-  `description` varchar(500) DEFAULT NULL,
-  `code_file` mediumblob,
+  `description` varchar(1000) DEFAULT NULL,
+  `file_name` varchar(100) DEFAULT NULL,
+  `file_data` longblob,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=1 DEFAULT CHARSET=latin1;

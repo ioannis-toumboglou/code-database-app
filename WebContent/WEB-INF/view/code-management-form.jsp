@@ -46,7 +46,7 @@
 					</tr>
 					<tr id="table">
 						<td><label><b>File:</b></label></td>
-						<td><input type="file" name="code_file" /></td>
+						<td><input type="file" name="file" /></td>
 					</tr>
 					<tr style="margin-left:150px; background-color: aliceblue;">
 						<td><label></label></td>
