@@ -26,6 +26,14 @@
 		<property name="prefix" value="/WEB-INF/view/" />
 		<property name="suffix" value=".jsp" />
 	</bean>
+	
+	<!-- Define file upload parameters -->
+	<bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<!-- Max upload size -->
+		<property name="maxUploadSize" value="20971520" /> <!-- 20MB -->
+		<!-- Max file size in memory (in bytes) -->
+		<property name="maxInMemorySize" value="1048576" /> <!-- 1MB -->
+	</bean>
 
     <!-- Step 1: Define Database DataSource / connection pool -->
 	<bean id="myDataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"

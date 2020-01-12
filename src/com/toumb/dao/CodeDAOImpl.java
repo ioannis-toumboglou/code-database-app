@@ -81,5 +81,9 @@ public class CodeDAOImpl implements CodeDAO {
 		
 		return codeList;
 	}
+	
+	public void saveFile(Code code) {
+		sessionFactory.getCurrentSession().save(code);
+	}
 
 }

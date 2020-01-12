@@ -1,5 +1,6 @@
 package com.toumb.controller;
 
+import java.io.IOException;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +11,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
 import com.toumb.entity.Code;
 import com.toumb.service.CodeService;
@@ -43,9 +45,16 @@ public class CodeController {
 	}
 	
 	@RequestMapping("/saveCode")
-	public String saveCode(@ModelAttribute("code") Code code, BindingResult result) {		
-		// Save the code using the service
-		codeService.saveCode(code);
+	public String saveCode(@ModelAttribute("code") Code code, BindingResult result, @RequestParam CommonsMultipartFile[] file) throws IOException {
+		if(file != null && file.length > 0) {
+			for(CommonsMultipartFile aFile : file) {
+				code.setFileName(aFile.getOriginalFilename());
+				code.setData(aFile.getBytes());
+				
+				// Save the code using the service
+				codeService.saveCode(code);
+			}
+		}
 		
 		return "redirect:/code/list";
 	}

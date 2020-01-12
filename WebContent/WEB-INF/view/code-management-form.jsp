@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -20,7 +21,7 @@
 	<div id="container">
 		<h3>Save Code</h3>
 		
-		<form:form action="saveCode" modelAttribute="code" method="POST">
+		<form:form action="saveCode" modelAttribute="code" method="POST" enctype="multipart/form-data">
 			<!-- Need to associate the data with code id -->
 			<form:hidden path="id"/>
 		
@@ -46,8 +47,12 @@
 					</tr>
 					<tr id="table">
 						<td><label><b>File:</b></label></td>
-						<td><input type="file" name="file" /></td>
+						<td><input type="file" name="file" size="50" /></td>
 					</tr>
+					<c:forEach items="${files}" var="file">
+					    <c:out value="${file.file_name}" />
+					    <br/>
+					</c:forEach>
 					<tr style="margin-left:150px; background-color: aliceblue;">
 						<td><label></label></td>
 						<td>
