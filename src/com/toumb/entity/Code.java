@@ -92,14 +92,14 @@ public class Code {
 		this.description = description;
 	}
 	
-	public String getFileName() {
+	public String getFileName() {		
 		return fileName;
 	}
 
 	public void setFileName(String fileName) {
 		this.fileName = fileName;
 	}
-
+	
 	public byte[] getData() {
 		return data;
 	}

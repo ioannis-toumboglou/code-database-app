@@ -33,6 +33,10 @@ input {
 	background: #c0c0c0;
 }
 
+.save:active {
+	background: #808080;
+}
+
 .cancel {
 	font-weight: bold;
 	width: 125px; 
@@ -47,6 +51,9 @@ input {
 	background: #c0c0c0;
 }
 
+.cancel:active {
+	background: #808080;
+}
 
 tr:nth-child(even) {background: #FFFFFF}
 tr:nth-child(odd) {background: #FFFFFF}

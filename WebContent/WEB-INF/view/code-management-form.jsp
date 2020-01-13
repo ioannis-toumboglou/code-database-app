@@ -1,5 +1,4 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 
 <!DOCTYPE html>
 <html>
@@ -49,10 +48,10 @@
 						<td><label><b>File:</b></label></td>
 						<td><input type="file" name="file" size="50" /></td>
 					</tr>
-					<c:forEach items="${files}" var="file">
-					    <c:out value="${file.file_name}" />
-					    <br/>
-					</c:forEach>
+					<tr id="table">
+						<td></td>
+						<td><a href="file:///c://Users//toumb-laptop//Desktop//Files//${code.fileName}">${code.fileName}</a></td>
+					</tr>
 					<tr style="margin-left:150px; background-color: aliceblue;">
 						<td><label></label></td>
 						<td>

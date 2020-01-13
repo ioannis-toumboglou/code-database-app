@@ -50,11 +50,10 @@ public class CodeController {
 			for(CommonsMultipartFile aFile : file) {
 				code.setFileName(aFile.getOriginalFilename());
 				code.setData(aFile.getBytes());
-				
-				// Save the code using the service
-				codeService.saveCode(code);
 			}
 		}
+		// Save the code using the service
+		codeService.saveCode(code);
 		
 		return "redirect:/code/list";
 	}

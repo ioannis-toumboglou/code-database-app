@@ -64,6 +64,10 @@ tr:hover {
 	background: #c0c0c0;
 }
 
+.add-button:active {
+	background: #808080;
+}
+
 a {
 	text-decoration: none;
 }
