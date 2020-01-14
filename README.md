@@ -1,4 +1,4 @@
-# Java Code Database
+# Code Database Application
 <b>Description:</b>
 
 A web application that is connected to a database that contains code files, 
