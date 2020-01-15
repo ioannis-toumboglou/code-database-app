@@ -67,9 +67,9 @@ public class CodeController {
 	}
 	
 	@RequestMapping("/updateCode")
-	public String updateCode(@ModelAttribute("code") Code code) throws IOException {
+	public String updateCode(@ModelAttribute("code") Code code, BindingResult result) {
 		// Save the code using the service
-		codeService.saveCode(code);
+		codeService.updateCode(code);
 		
 		return "redirect:/code/list";
 	}

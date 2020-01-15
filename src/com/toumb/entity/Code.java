@@ -41,11 +41,11 @@ public class Code {
 	@Column(name="description")
 	private String description;
 	
-	@Column(name="file_name", updatable=false, nullable=false)
+	@Column(name="file_name", updatable=false)
 	private String fileName;
 	
 	@Lob @Basic(fetch=FetchType.LAZY)
-	@Column(name="file_data")
+	@Column(name="file_data", updatable=false)
 	private byte[] data;
 	
 	public Code() {

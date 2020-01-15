@@ -27,6 +27,12 @@ public class CodeServiceImpl implements CodeService {
 	public void saveCode(Code code) {
 		codeDAO.saveCode(code);
 	}
+	
+	@Override
+	@Transactional
+	public void updateCode(Code code) {
+		codeDAO.updateCode(code);
+	}
 
 	@Override
 	@Transactional

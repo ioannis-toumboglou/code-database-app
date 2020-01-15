@@ -9,6 +9,8 @@ public interface CodeService {
 	public List<Code> getCode();
 
 	public void saveCode(Code code);
+	
+	public void updateCode(Code code);
 
 	public Code getCode(int id);
 

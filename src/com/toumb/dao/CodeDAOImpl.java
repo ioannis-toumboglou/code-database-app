@@ -35,8 +35,17 @@ public class CodeDAOImpl implements CodeDAO {
 		// Get current Hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		// Save/Update the code record
-		currentSession.saveOrUpdate(code);
+		// Save the code record
+		currentSession.save(code);
+	}
+	
+	@Override
+	public void updateCode(Code code) {
+		// Get current Hibernate session
+		Session currentSession = sessionFactory.getCurrentSession();
+		
+		// Update the code record
+		currentSession.update(code);
 	}
 
 	@Override

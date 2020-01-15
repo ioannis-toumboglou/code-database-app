@@ -18,7 +18,7 @@
 	</div>
 	
 	<div id="container">
-		<h3>Save Code</h3>
+		<h3>Update Code</h3>
 		
 		<form:form action="updateCode" modelAttribute="code" method="POST" enctype="multipart/form-data">
 			<!-- Need to associate the data with code id -->
