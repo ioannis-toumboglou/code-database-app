@@ -26,13 +26,11 @@ public class CodeServiceImpl implements CodeService {
 	@Transactional
 	public void saveCode(Code code) {
 		codeDAO.saveCode(code);
-		
 	}
 
 	@Override
 	@Transactional
 	public Code getCode(int id) {
-		
 		return codeDAO.getCode(id);
 	}
 
@@ -40,13 +38,11 @@ public class CodeServiceImpl implements CodeService {
 	@Transactional
 	public void deleteCode(int id) {
 		codeDAO.deleteCode(id);
-		
 	}
 
 	@Override
 	@Transactional
 	public List<Code> searchCode(String keyword) {
-		
 		return codeDAO.searchCode(keyword);
 	}
 

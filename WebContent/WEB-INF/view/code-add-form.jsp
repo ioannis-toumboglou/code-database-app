@@ -45,12 +45,8 @@
 						</td>
 					</tr>
 					<tr id="table">
-						<td><label><b>File:</b></label></td>
-						<td><input type="file" name="file" size="50" /></td>
-					</tr>
-					<tr id="table">
-						<td></td>
-						<td><a href="file:///c://Users//toumb-laptop//Desktop//Files//${code.fileName}">${code.fileName}</a></td>
+						<td><label><b>Add File:</b></label></td>
+						<td><input type="file" name="file" size="50" required="required" /></td>
 					</tr>
 					<tr style="margin-left:150px; background-color: aliceblue;">
 						<td><label></label></td>
@@ -62,7 +58,6 @@
 				</tbody>
 			</table>
 		</form:form>
-		
 		<div style="clear; both;"></div>
 		
 	</div>

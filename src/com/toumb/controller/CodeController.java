@@ -41,16 +41,14 @@ public class CodeController {
 		
 		model.addAttribute("code", code);
 		
-		return "code-management-form";
+		return "code-add-form";
 	}
 	
 	@RequestMapping("/saveCode")
 	public String saveCode(@ModelAttribute("code") Code code, BindingResult result, @RequestParam CommonsMultipartFile[] file) throws IOException {
-		if(file != null && file.length > 0) {
-			for(CommonsMultipartFile aFile : file) {
+		for(CommonsMultipartFile aFile : file) {
 				code.setFileName(aFile.getOriginalFilename());
 				code.setData(aFile.getBytes());
-			}
 		}
 		// Save the code using the service
 		codeService.saveCode(code);
@@ -58,14 +56,22 @@ public class CodeController {
 		return "redirect:/code/list";
 	}
 	
-	@GetMapping("showUpdateForm")
+	@GetMapping("/showUpdateForm")
 	public String showUpdateForm(@RequestParam("codeId") int id, Model model) {
 		// Get code from the service
 		Code code = codeService.getCode(id);
 		// Set code as a model attribute to pre-populate the form
 		model.addAttribute("code", code);
 		// Send to the form		
-		return "code-management-form";
+		return "code-update-form";
+	}
+	
+	@RequestMapping("/updateCode")
+	public String updateCode(@ModelAttribute("code") Code code) throws IOException {
+		// Save the code using the service
+		codeService.saveCode(code);
+		
+		return "redirect:/code/list";
 	}
 	
 	@GetMapping("/delete")

@@ -3,18 +3,23 @@ package com.toumb.entity;
 import java.util.Calendar;
 import java.util.Date;
 
+import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.Lob;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
+import org.hibernate.annotations.DynamicUpdate;
 import org.springframework.format.annotation.DateTimeFormat;
 
 @Entity
+@DynamicUpdate
 @Table(name="code")
 public class Code {
 	@Id
@@ -36,9 +41,10 @@ public class Code {
 	@Column(name="description")
 	private String description;
 	
-	@Column(name="file_name")
+	@Column(name="file_name", updatable=false, nullable=false)
 	private String fileName;
 	
+	@Lob @Basic(fetch=FetchType.LAZY)
 	@Column(name="file_data")
 	private byte[] data;
 	
