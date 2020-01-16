@@ -46,7 +46,7 @@
 					</tr>
 					<tr id="table">
 						<td><label><b>Document:</b></label></td>
-						<td><a href="file:///C:/Users/toumb-laptop/Desktop/Files/${code.fileName}" target="_blank" title="Open file">${code.fileName}</a></td>
+						<td><a href="${pageContext.request.contextPath}/download/${code.data}.html" target="_blank" title="Open file">${code.fileName}</a></td>
 					</tr>
 					<tr style="margin-left:150px; background-color: aliceblue;">
 						<td><label></label></td>
@@ -58,8 +58,9 @@
 				</tbody>
 			</table>
 		</form:form>
-		<div style="clear; both;"></div>
 		
+		<div style="clear; both;"></div>
+
 	</div>
 
 </body>

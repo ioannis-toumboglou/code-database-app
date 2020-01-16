@@ -1,18 +1,25 @@
 package com.toumb.controller;
 
 import java.io.IOException;
+import java.io.OutputStream;
+import java.sql.SQLException;
 import java.util.List;
 
+import javax.servlet.http.HttpServletResponse;
+
+import org.apache.commons.io.IOUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.multipart.commons.CommonsMultipartFile;
 
+import com.toumb.dao.CodeDAOImpl;
 import com.toumb.entity.Code;
 import com.toumb.service.CodeService;
 
@@ -89,6 +96,25 @@ public class CodeController {
 		model.addAttribute("codeList", codeList);
 		
 		return "list-code";
+	}
+	
+	@RequestMapping("/download/{code.data}")
+	public String download(@PathVariable("codeId") int id, HttpServletResponse response) {
+		
+		Code code = codeService.getCode(id);
+		
+		try {
+			response.setHeader("Content-Disposition", "inline;filename=\"" + code.getFileName() + "\"");
+			OutputStream out = response.getOutputStream();
+			//IOUtils.copy(code.getData().get, out);
+			out.flush();
+			out.close();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		return null;
+		
 	}
 	
 }
