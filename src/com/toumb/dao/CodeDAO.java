@@ -17,7 +17,5 @@ public interface CodeDAO {
 	public void deleteCode(int id);
 
 	public List<Code> searchCode(String keyword);
-	
-	public void saveFile(Code code);
 
 }

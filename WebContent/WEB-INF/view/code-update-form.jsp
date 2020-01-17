@@ -1,4 +1,5 @@
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <!DOCTYPE html>
 <html>
@@ -46,7 +47,7 @@
 					</tr>
 					<tr id="table">
 						<td><label><b>Document:</b></label></td>
-						<td><a href="${pageContext.request.contextPath}/download/${code.data}.html" target="_blank" title="Open file">${code.fileName}</a></td>
+						<td><a href="<c:url value='/resources/code-files/${code.fileName}' />" target="_blank" title="Open file">${code.fileName}</a></td>
 					</tr>
 					<tr style="margin-left:150px; background-color: aliceblue;">
 						<td><label></label></td>
