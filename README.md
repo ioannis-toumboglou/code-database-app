@@ -2,8 +2,8 @@
 <b>Description:</b>
 
 A web application that is connected to a database that contains code files, 
-performing CRUD operations. The user has the ability to store files, provide a
-description and search the records with the use of keywords.
+performing CRUD operations. The user has the ability to store files providing a
+description, open/download the files and search the records with the use of keywords.
 <br><br>
 <b>Technologies used:</b>
 <br>
