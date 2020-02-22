@@ -1,8 +1,8 @@
 # Code Database Application
 <b>Description:</b>
 
-An application that is connected to a database which contains code files, performing 
-CRUD operations. The user has the ability to store files providing a description, 
+A code management application that uses an HTTP server and an SQL database, performing 
+CRUD operations. <br>The user has the ability to store files providing a description, 
 open/download the files and search the records with the use of keywords.
 <br><br>
 <b>Technologies used:</b>
